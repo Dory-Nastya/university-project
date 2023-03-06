@@ -1,11 +1,11 @@
 package enams;
 
 public enum StudyProfile {
+    MEDICINE("Медицина"),
     PHYSICS("Физика"),
     COMPUTER_SCIENCE("Информатика"),
     MATHEMATICS("Математика"),
     JURISPRUDENCE("Юриспруденция"),
-    MEDICINE("Медицина"),
     LINGUISTICS("Лингвистика");
 
     private final String profileName;
