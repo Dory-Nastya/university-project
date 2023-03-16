@@ -8,7 +8,7 @@ public class Main {
         Student student = new Student();
         student.setAvgExamScore((float)3.5)
                 .setCurrentCourseNumber(3)
-                .setFullName("Petrova Anna Alexandrovna")
+                .setFullName("Ivanova Anna Alexandrovna")
                 .setUniversityId("0001-high");
         System.out.println(student);
 
