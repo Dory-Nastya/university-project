@@ -1,23 +1,24 @@
-import enams.StudyProfile;
+import io.XlsReader;
 import model.Student;
 import model.University;
 
+import java.io.IOException;
+import java.util.List;
+
 public class Main {
-    public static void main(String[] args) {
 
-        Student student = new Student();
-        student.setAvgExamScore((float)3.5)
-                .setCurrentCourseNumber(3)
-                .setFullName("Ivanova Anna Alexandrovna")
-                .setUniversityId("0001-high");
-        System.out.println(student);
+    public static void main(String[] args) throws IOException {
 
-        University university = new University();
-        university.setId("0001-high")
-                .setFullName("Some Technical University")
-                .setShortName("STU")
-                .setYearOfFoundation(1985)
-                .setMainProfile(StudyProfile.COMPUTER_SCIENCE);
-        System.out.println(university);
+        List<University> universities =
+                XlsReader.readXlsUniversities("src/main/resources/universityInfo.xlsx");
+        for(University university : universities) {
+            System.out.println(university);
+        }
+
+        List<Student> students =
+                XlsReader.readXlsStudents("src/main/resources/universityInfo.xlsx");
+        for(Student student : students) {
+            System.out.println(student);
+        }
     }
 }
