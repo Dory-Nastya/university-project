@@ -1,11 +1,11 @@
 import comparator.StudentComparator;
 import comparator.UniversityComparator;
 import enams.StudentComparatorType;
-import enums.StudentComparatorType;
-import enums.UniversityComparatorType;
+import enams.UniversityComparatorType;
 import io.XlsReader;
 import model.Student;
 import model.University;
+import util.ComparatorUtil;
 
 import java.io.IOException;
 import java.util.List;

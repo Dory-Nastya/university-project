@@ -1,6 +1,6 @@
 package enams;
 
-public class UniversityComparatorType {
+public enum UniversityComparatorType {
     ID,
     FULL_NAME,
     SHORT_NAME,
