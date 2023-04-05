@@ -3,10 +3,12 @@ import comparator.UniversityComparator;
 import enams.StudentComparatorType;
 import enams.UniversityComparatorType;
 import io.XlsReader;
+import io.XlsWriter;
 import model.Student;
 import model.University;
 import util.ComparatorUtil;
 import util.JsonUtil;
+import util.StatisticsUtil;
 
 import java.io.IOException;
 import java.util.List;
@@ -48,5 +50,7 @@ public class Main {
             Student studentFromJson = JsonUtil.jsonToStudent(studentJson);
             System.out.println(studentFromJson);
         });
+        List<Statistics> statisticsList = StatisticsUtil.createStatistics(students, universities);
+        XlsWriter.writeXlsStatistics(statisticsList, "statistics.xlsx");
     }
 }
