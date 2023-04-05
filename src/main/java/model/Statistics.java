@@ -9,7 +9,7 @@ public class Statistics {
     private int numberOfUniversities;
     private String universityNames;
 
-    public Statistics(StudyProfile profile, float avgExamScore, int numberOfStudents, int numberOfUniversities, String universityNames) {
+    public Statistics() {
         this.profile = profile;
         this.avgExamScore = avgExamScore;
         this.numberOfStudents = numberOfStudents;
