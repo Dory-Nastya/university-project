@@ -28,6 +28,7 @@ public class ComparatorUtil {
     public static UniversityComparator getUniversityComparator(UniversityComparatorType universityComparatorType) {
         switch (universityComparatorType) {
 
+
             case FULL_NAME:
                 return new UniversityFullNameComparator();
             case SHORT_NAME:

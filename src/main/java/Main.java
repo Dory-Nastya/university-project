@@ -2,8 +2,11 @@ import comparator.StudentComparator;
 import comparator.UniversityComparator;
 import enams.StudentComparatorType;
 import enams.UniversityComparatorType;
+import io.JsonWriter;
 import io.XlsReader;
 import io.XlsWriter;
+import io.XmlWriter;
+import model.FullInfo;
 import model.Statistics;
 import model.Student;
 import model.University;
@@ -11,6 +14,7 @@ import util.ComparatorUtil;
 import util.StatisticsUtil;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -46,6 +50,15 @@ public class Main {
 
         List<Statistics> statisticsList = StatisticsUtil.createStatistics(students, universities);
         XlsWriter.writeXlsStatistics(statisticsList, "statistics.xlsx");
+
+        FullInfo fullInfo = new FullInfo()
+                .setStudentList(students)
+                .setUniversityList(universities)
+                .setStatisticsList(statisticsList)
+                .setProcessDate(new Date());
+
+        XmlWriter.generateXmlReq(fullInfo);
+        JsonWriter.writeJsonReq(fullInfo);
 
         logger.log(INFO, "Application finished");
     }
