@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class JsonWriter {
+
     private static final Logger logger = Logger.getLogger(JsonWriter.class.getName());
 
     private JsonWriter() {

@@ -1,7 +1,6 @@
 package model;
 
 import enams.StudyProfile;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,10 +8,13 @@ import javax.xml.bind.annotation.XmlTransient;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Statistics {
+
     @XmlElement(name = "universityProfile")
     private StudyProfile profile;
+
     @XmlElement(name = "avgScore")
     private float avgExamScore;
+
     @XmlTransient
     private int numberOfStudents;
 

@@ -19,9 +19,12 @@ import java.util.stream.Collectors;
 public class StatisticsUtil {
 
     private static final Logger logger = Logger.getLogger(StatisticsUtil.class.getName());
+
     private StatisticsUtil() {
     }
-    public static List<Statistics> createStatistics(List<Student> students, List<University> universities) {
+
+    public static List<Statistics> createStatistics(List<Student> students,
+                                                    List<University> universities) {
 
         logger.log(Level.INFO, "Statistics module started");
 
@@ -61,7 +64,6 @@ public class StatisticsUtil {
 
         logger.log(Level.INFO,
                 String.format("Statistics module finished with %s statistical objects", statisticsList.size()));
-
 
         return statisticsList;
     }

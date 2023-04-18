@@ -3,7 +3,8 @@ package comparator;
 import model.University;
 import org.apache.commons.lang3.StringUtils;
 
-public class UniversityProfileComparator implements UniversityComparator{
+public class UniversityProfileComparator implements UniversityComparator {
+
     @Override
     public int compare(University o1, University o2) {
         if (null == o1.getMainProfile()) {

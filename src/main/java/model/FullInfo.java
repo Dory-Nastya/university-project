@@ -7,6 +7,7 @@ import java.util.List;
 @XmlRootElement(name = "root")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FullInfo {
+
     @XmlElementWrapper(name = "studentsInfo")
     @XmlElement(name = "studentEntry")
     private List<Student> studentList;
