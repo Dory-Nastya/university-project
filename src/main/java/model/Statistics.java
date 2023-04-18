@@ -3,58 +3,55 @@ package model;
 import enams.StudyProfile;
 
 public class Statistics {
+
     private StudyProfile profile;
     private float avgExamScore;
     private int numberOfStudents;
     private int numberOfUniversities;
     private String universityNames;
 
-    public Statistics() {
-        this.profile = profile;
-        this.avgExamScore = avgExamScore;
-        this.numberOfStudents = numberOfStudents;
-        this.numberOfUniversities = numberOfUniversities;
-        this.universityNames = universityNames;
-
-    }
-
     public StudyProfile getProfile() {
         return profile;
     }
 
-    public void setProfile(StudyProfile profile) {
+    public Statistics setProfile(StudyProfile profile) {
         this.profile = profile;
+        return this;
     }
 
     public float getAvgExamScore() {
         return avgExamScore;
     }
 
-    public void setAvgExamScore(float avgExamScore) {
+    public Statistics setAvgExamScore(float avgExamScore) {
         this.avgExamScore = avgExamScore;
+        return this;
     }
 
     public int getNumberOfStudents() {
         return numberOfStudents;
     }
 
-    public void setNumberOfStudents(int numberOfStudents) {
+    public Statistics setNumberOfStudents(int numberOfStudents) {
         this.numberOfStudents = numberOfStudents;
+        return this;
     }
 
     public int getNumberOfUniversities() {
         return numberOfUniversities;
     }
 
-    public void setNumberOfUniversities(int numberOfUniversities) {
+    public Statistics setNumberOfUniversities(int numberOfUniversities) {
         this.numberOfUniversities = numberOfUniversities;
+        return this;
     }
 
     public String getUniversityNames() {
         return universityNames;
     }
 
-    public void setUniversityNames(String universityNames) {
+    public Statistics setUniversityNames(String universityNames) {
         this.universityNames = universityNames;
+        return this;
     }
 }
